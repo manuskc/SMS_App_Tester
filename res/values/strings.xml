@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmsApp_Tester</string>
+    <string name="action_dummy">Have a nice day!</string>
+    <string name="hint_text">Enter URL of test file</string>
+    <string name="start_button_title">Start</string>
+    <string name="abort_button_title">Abort</string>
+    <string name="on_cancel_button_title">.....</string>
+    <string name="default_result_text">Welcome!\n1) Enter an URL of test file.csv\n2) Click start to execute tests</string>
+
+</resources>
