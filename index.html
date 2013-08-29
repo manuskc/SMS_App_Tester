@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Sms app tester by manuskc</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Sms app tester</h1>
+        <h2>A framework for testing SMS services and apps on any android phones</h2>
+        <a href="https://github.com/manuskc/SMS_App_Tester" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="sms-tester-app" class="anchor" href="#sms-tester-app"><span class="octicon octicon-link"></span></a>SMS Tester App</h1>
+
+<p>An application and a testing framework to test sms app.</p>
+
+<p>Using this application you can test your sms based application on a real device.You can define your test cases in a simple csv file and execute all the test cases over multiple android phone without any supervision.
+The application downloads the test file, executes all the test cases by sending sms and reports the results.</p>
+
+<p>Example app:</p>
+
+<ul>
+<li><p>Twitter SMS app - We could define various test cases like to send a registraton message, accpet by replying code to a specific number, send a tweet, expect response message to have a success response.
+The above test cases could be defined in 4 lines of csv file.</p></li>
+<li><p>Facebook SMS app - We could define test cases for accessing wall posts, read the message to find out specfic link letter that is to be used to send next message to post comment or like the post.
+Again these test cases could be written in a couple of lines.</p></li>
+<li><p>txtWeb apps - Every apps on txtWeb could be tested by accessing the keyword and tested by expecting a response message pattern. Also a forms and links in the resonse can be extracted and sent in next message.</p></li>
+</ul><p>Good this about the framweork:</p>
+
+<ul>
+<li>Aims to be complete solution for testing any SMS service via a simple interface to describe test cases.</li>
+<li>Sends sms from a actual device and hence as good as manual testing but much more effecient since there is no manual intervention</li>
+<li>Understands the problem of SMS, It automatically retries by sending SMS whenever it does not receives a response within timeout and also gracefully handles all the duplicate messages created in the process.</li>
+<li>Runs literally on any android phone - built with minimum Android SDK version 2.2</li>
+<li>Testing framework is easily extendable and componenets are pluggable
+
+<ul>
+<li>Easy to add a new test type - example test for regex, test for endsWith/startWith etc.</li>
+<li>Add new getMessage type - could send a static message or a specific part of message extracted by previous message etc.</li>
+<li>It is easy to plug getMessage() and testTypes() to create various combination</li>
+</ul>
+</li>
+<li>Can send message to specific number and expect message from specific address</li>
+<li>Handle invalid message received - example some spam message sent to device during testing wont crash the testing.</li>
+</ul><p>More documentation will be added soon on exactly how to use and extend testing framework.
+Currently this is in a alpha version (a work in progress) - I am using it to test few SMS services I am currently maintaining mostly to test that stabilty of framework and imporve it.
+If you want to give it a try see the sample csv file attached.
+Go through TestExecutor.java once and you will be up and running in few minutes.</p>
+
+<p>TODO's:</p>
+
+<ul>
+<li>Use xl file instead of csv</li>
+<li>Separarte getMessage() and executeTest()</li>
+<li>Dependancy chain</li>
+</ul><p>More details to follow soon...</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/manuskc/SMS_App_Tester/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/manuskc/SMS_App_Tester/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/manuskc/SMS_App_Tester"></a> is maintained by <a href="https://github.com/manuskc">manuskc</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-43628832-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
